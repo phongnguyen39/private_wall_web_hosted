@@ -54,7 +54,7 @@ def registration():
         return redirect('/')
 
     if not EMAIL_REGEX.match(request.form['emails']):
-        flash(f"{request.form['emails]} is invalid")
+        flash(f"{request.form['emails']} is invalid")
         return redirect('/')
 
     login_reg = connectToMySQL('login_reg_messages')
